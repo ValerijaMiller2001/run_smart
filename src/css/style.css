@@ -1,0 +1,7 @@
+@import url("general.css");
+@import url("media.css");
+@import url("variables.css");
+
+* {
+    font-family: 'Museo sans Cyrl', sans-serif;
+}
