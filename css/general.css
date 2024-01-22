@@ -1,4 +1,5 @@
 .container {
+    position: relative;
     max-width: 950px;
     margin: 0 auto;
 }
@@ -160,7 +161,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 60px;
-    max-width: 238px;
+    width: 238px;
 }
 
 
@@ -244,35 +245,36 @@
 
 .carousel_inner {
     position: relative;
-    width: 750px;
     margin: 0 auto;
 }
 
 
-.carousel .slick-prev {
+.carousel .prev {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -66px;
+    left: -4px;
     border: none;
     background-color: var(--white-color);
 }
 
-.carousel .slick-prev img {
+
+.carousel .prev img, .next img {
     width: 31px;
     height: 50px;
 }
 
-.carousel .slick-next {
+.carousel .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -66px;
+    right: -4px;
     border: none;
     background-color: var(--white-color);
 }
 
-.carousel .slick-next img {
-    width: 31px;
-    height: 50px;
+.tns-item img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
 }

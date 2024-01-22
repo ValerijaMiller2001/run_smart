@@ -12,7 +12,7 @@
     }
 
     .advantages_item {
-        max-width: 210px;
+        width: 280px;
         padding: 10px;
     }
 
@@ -28,9 +28,44 @@
         font-size: 33px;
     }
 
+    .carousel .prev {
+        display: none;
+    }
+
+    .carousel .next {
+        display: none;
+    }
+    
+    .tns-nav {
+        position: absolute;
+        top: 100%;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    .tns-nav button {
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        margin: 0 5px;
+        border-radius: 50%;
+        border: 0;
+        background: #D0D0D0;
+    }
+
+    .tns-nav .tns-nav-active {
+        background: #545454;
+    }
+
+
+
 }
 
 @media screen and (max-width: 767px){
+    .container {
+        width: 100%;
+    }
+    
     .header_logo {
         width: 175px;
     }
@@ -64,7 +99,7 @@
     }
 
     .advantages_item {
-        max-width: 390px;
+        width: 390px;
         display: block;
         margin: 0 auto;
     }
@@ -128,7 +163,7 @@
     }
 
     .advantages_item {
-        max-width: 290px;
+        width: 290px;
     }
 
     .consultation {
