@@ -37,6 +37,7 @@
     }
     
     .tns-nav {
+        display: block;
         position: absolute;
         top: 100%;
         transform: translateX(-50%);
@@ -191,17 +192,20 @@
     }
 
     .feed-form {
-        display: block;
-        margin: 0 auto;
         margin-top: 36px;
-
     }
 
     .feed-form input {
+        display: block;
+        margin: 0 auto;
         width: 270px;
+        margin-bottom: 15px;
     }
 
     .button_submit {
+        display: block;
+        margin: 0 auto;
         width: 270px;
+        margin-bottom: 15px;
     }
 }
