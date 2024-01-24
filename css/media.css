@@ -3,6 +3,11 @@
 }
 
 @media screen and (max-width: 991px){
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    } 
+
     .promo {
         padding: 21px 20px 93px 20px;
     }
@@ -58,6 +63,17 @@
         background: #545454;
     }
 
+    .catalog_content {
+        justify-content: space-around;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .catalog_item {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
 
 
 }
@@ -65,6 +81,8 @@
 @media screen and (max-width: 767px){
     .container {
         width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     
     .header_logo {
@@ -110,6 +128,14 @@
         margin: 0 auto;
     }
 
+    .catalog_content {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .catalog_tab {
+        width: 195px;
+    }
 }
 
 @media screen and (max-width: 575px){
@@ -208,4 +234,63 @@
         width: 270px;
         margin-bottom: 15px;
     }
+
+    .catalog_tab {
+        width: 155px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .reviews_item {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .reviews_item img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .reviews_descr {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .reviews_descr_title {
+        text-align: center;
+    }
+
+    .reviews_descr_subtitle {
+        font-size: 14px;
+    }
+
+    
+}
+
+@media screen and (max-width: 481px) {
+    .catalog_tabs {
+        display: block;
+        margin: 0 auto;
+/*         width: 155px;
+        height: 45px;
+        font-size: 16px; */
+    }
+
+    .catalog_tab {
+        width: 220px;
+        height: 50px;
+        font-size: 18px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+
+    .catalog_item {
+        display: block;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+
 }
