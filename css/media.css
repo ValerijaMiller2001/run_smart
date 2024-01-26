@@ -8,26 +8,36 @@
         padding-right: 20px;
     } 
 
-    .promo {
-        padding: 21px 20px 93px 20px;
+    .header_logo {
+        margin-right: 25px;
     }
 
-    .advantages {
-        padding: 73px 20px 65px 20px;
+    .header_official {
+        margin-right: 50px;
+        margin-left: 25px;
+    }
+
+    .header_contacts {
+        margin-left: 50px;
+    }
+
+    .header_phone {
+        font-size: 16px;
     }
 
     .advantages_item {
-        width: 280px;
-        padding: 10px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .advantages_subheader {
+        font-size: 15px;
     }
 
     .advantages_descr br {
         display: none;
-    }
+    } 
 
-    .consultation {
-        padding: 100px 20px 92px 20px;
-    }
 
     .consultation .title {
         font-size: 33px;
@@ -119,22 +129,27 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-    
-    .header_logo {
-        width: 175px;
-    }
-    
-    .header_phone {
-        font-size: 17px;
-    }
 
     .header_official {
-        font-size: 10px;
+        margin-right: 25px;
     }
 
     .header_official span {
-        font-size: 15px;
+        font-size: 11px;
     }
+
+    .header_contacts {
+        margin-left: 25px;
+    }
+
+    .header_phone {
+        font-size: 14px;
+    }
+
+    .button {
+        width: 140px;
+    }
+    
     
     .promo_header {
         font-size: 35px;
@@ -150,18 +165,21 @@
 
     .advantages_wrapper {
         display: block;
-    }
+        margin: 0 auto;
+    } 
 
     .advantages_item {
-        width: 390px;
         display: block;
         margin: 0 auto;
+        width: 80%;
+        margin-top: 60px;
     }
 
     .advantages_item img {
         display: block;
         margin: 0 auto;
     }
+
 
     .catalog_content {
         margin-right: 10px;
@@ -174,16 +192,8 @@
 }
 
 @media screen and (max-width: 575px){
-    .header_logo {
-        margin-right: 10px;
-    }
-    
     .header_official {
         display: none;
-    }
-
-    .button {
-        width: 130px;
     }
 
     .button_main {
@@ -191,12 +201,9 @@
         display: block;
         margin: 0 auto;
         margin-top: 50px;
-    }
-
-    .header_phone {
         font-size: 15px;
     }
-    
+
     .promo_header {
         text-align: center;
     }
@@ -224,13 +231,6 @@
         font-size: 23px;
     }
 
-    .advantages_item {
-        width: 290px;
-    }
-
-    .consultation {
-        padding: 80px 20px 92px 20px;
-    }
 
     .consultation .title {
         text-align: center;
@@ -316,12 +316,32 @@
 }
 
 @media screen and (max-width: 481px) {
+    .header_logo {
+        margin-right: 0;
+    }
+
+    .button {
+        width: 120px;
+        font-size: 11px;
+    }
+
+    .button_main {
+        width: 230px;
+        font-size: 15px;
+    }
+
+    .button_submit {
+        width: 270px;
+        font-size: 16px;
+    }
+
+    .header_phone {
+        font-size: 13px;
+    }
+
     .catalog_tabs {
         display: block;
         margin: 0 auto;
-/*         width: 155px;
-        height: 45px;
-        font-size: 16px; */
     }
 
     .catalog_tab {
