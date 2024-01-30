@@ -43,5 +43,70 @@ $(document).ready(function(){
     toggleSlide('.catalog_link');
     toggleSlide('.catalog_item_back');
 
+/*     Modal */
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal_close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow')
+    });
+    $('.catalog_btn').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal_descr').text($('.catalog_subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        })
+    });
+
+
+/* Валидация */
+
+/*     $('#consultation-form').validate();
+    $('#consultation form').validate({
+        rules: {
+            name: "required",
+            phone: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: "Пожалуйста, введите свое имя",
+            phone: "Пожалуйста, введите свой номер телефона",
+            email: {
+                required: "Пожалуйста, введите свою почту",
+                email: "Неправильно введен адресс"
+            }
+        }
+    });
+    $('#order form').validate(); */
+
+    function valideForms(form){
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожалуйста, введите свое имя",
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                    required: "Пожалуйста, введите свою почту",
+                    email: "Неправильно введен адресс"
+                }
+            }
+        });
+    };
+
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
+
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
 }) 
 

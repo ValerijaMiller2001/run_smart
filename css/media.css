@@ -118,9 +118,6 @@
     .footer_phone {
         display: block;
     }
-
-
-
 }
 
 @media screen and (max-width: 767px){
@@ -188,6 +185,10 @@
 
     .catalog_tab {
         width: 195px;
+    }
+
+    .button_submit {
+        width: 300px;
     }
 }
 
@@ -374,6 +375,32 @@
 
     .footer_social {
         margin-left: 0;
+    }
+
+    .modal {
+        width: 90%;
+    }
+
+    .modal_close {
+        top: 2px;
+        right: 0;
+    }
+
+    .feed-form_mt25 input {
+        width: 100%;
+    }
+
+    .modal .button_submit {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .modal_subtitle {
+        font-size: 16px;
+    }
+
+    .modal_descr {
+        font-size: 12px;
     }
 
 }
