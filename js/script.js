@@ -1,3 +1,4 @@
+/* слайдер */
 const slider = tns({
     container: '.carousel_inner',
     items: 1,
@@ -17,6 +18,7 @@ document.querySelector('.next').addEventListener('click', function () {
 });
 
 
+/* Каталог */
 $(document).ready(function(){
     $('ul.catalog_tabs').on('click', 'li:not(.catalog_tab_active)', function() {
         $(this)
@@ -44,7 +46,6 @@ $(document).ready(function(){
     toggleSlide('.catalog_item_back');
 
 /*     Modal */
-
     $('[data-modal=consultation]').on('click', function() {
         $('.overlay, #consultation').fadeIn('slow');
     });
@@ -60,28 +61,6 @@ $(document).ready(function(){
 
 
 /* Валидация */
-
-/*     $('#consultation-form').validate();
-    $('#consultation form').validate({
-        rules: {
-            name: "required",
-            phone: "required",
-            email: {
-                required: true,
-                email: true
-            }
-        },
-        messages: {
-            name: "Пожалуйста, введите свое имя",
-            phone: "Пожалуйста, введите свой номер телефона",
-            email: {
-                required: "Пожалуйста, введите свою почту",
-                email: "Неправильно введен адресс"
-            }
-        }
-    });
-    $('#order form').validate(); */
-
     function valideForms(form){
         $(form).validate({
             rules: {
@@ -108,5 +87,44 @@ $(document).ready(function(){
     valideForms('#order form');
 
     $('input[name=phone]').mask("+7 (999) 999-99-99");
-}) 
+
+/*     Отправка формы */
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+/*     Стрелка вверх */
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+/*     $("a[href^='#']").click(function() {
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    }); */
+
+});
 
