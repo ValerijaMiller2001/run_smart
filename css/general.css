@@ -177,7 +177,6 @@
     align-items: center;
     margin-top: 60px;
     width: 33%;
-/*     width: 238px; */
     margin-right: 34px;
     margin-left: 34px;
 }
@@ -203,6 +202,17 @@
 .advantages_descr span {
     color: var(--red-color);
     text-decoration-line: underline;
+}
+
+.advantages_icon_animated {
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.advantages_icon_animated:hover {
+    animation-play-state: paused;
 }
 
 
@@ -702,4 +712,19 @@
 
 .pageup img {
     width: 100%;
+}
+
+
+/* Анимации  */
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    to {
+        transform: scale(1); 
+    }
 }

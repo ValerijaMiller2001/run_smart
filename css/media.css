@@ -118,6 +118,11 @@
     .footer_phone {
         display: block;
     }
+
+    .pageup {
+        bottom: 20px;
+        right: 1px;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -354,10 +359,26 @@
         margin-top: 15px;
     }
 
+    .catalog_item_wrapper {
+        width: calc(200% + 84px);
+    }
+
+    .catalog_item_content_active {
+        margin-right: 40px;
+    }
+
     .catalog_item {
         display: block;
         margin: 0 auto;
         margin-top: 25px;
+    }
+
+    .catalog_item_list {
+        padding-right: 40px;
+    }
+
+    .catalog_new_price {
+        font-size: 18px;
     }
 
     .footer_info {
